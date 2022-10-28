@@ -1,20 +1,22 @@
 import React from "react";
-import logo from "../../../public/logo.jpg";
+// import { DataContext } from "context/DataProvider";
+import { Link } from "react-router-dom";
+import Logo from "../../images/Logo.jpg";
 
 export const Header = () => {
   return (
     <header>
-      <a href="#">
+      <Link to="/">
         <div className="logo">
-        <img src={logo} alt="logo" width="150" />
+        <img src={Logo} alt="logo" width="150" />
         </div>
-      </a>
+      </Link>
       <ul>
         <li>
-          <a href="#">INICIO</a>
+          <Link to="/">INICIO</Link>
         </li>
         <li>
-          <a href="#">PRODUCTOS</a>
+          <Link to="/productos">PRODUCTOS</Link>
         </li>
       </ul>
       <div className="cart">

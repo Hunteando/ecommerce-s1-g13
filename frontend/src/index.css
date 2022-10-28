@@ -86,6 +86,33 @@ header .cart span {
   background-color: crimson;
 }
 
+/* -------- INICIO -------- */
+.inicio{
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 7rem;
+}
+.inicio h1{
+  font-size: 2.5rem;
+  color: #08a05c;
+}
+.inicio h1:hover{
+  color: #094092;
+}
+.inicio img{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 32px;
+  gap: 16px;
+  
+  width: 1440px;
+  height: 352px;
+
+}
+
+
 /* -------- PRODUCTOS -------- */
 .title {
   font-size: 2rem;

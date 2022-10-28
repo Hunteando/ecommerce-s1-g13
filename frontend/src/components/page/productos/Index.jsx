@@ -1,5 +1,8 @@
 import React from "react";
-import IMG from "../../../images/1.jpg";
+import IMG1 from "../../../../images/1.jpg";
+import IMG2 from "../../../../images/2.jpg";
+import IMG3 from "../../../../images/3.jpg";
+import { Router } from "react-router-dom";
 
 export const ProductosLista = () => {
   return (
@@ -11,7 +14,7 @@ export const ProductosLista = () => {
         <div className="producto">
           <a href="#">
             <div className="producto__img">
-              <img src={IMG} alt="" />
+              <img src={IMG1} alt="" />
             </div>
           </a>
           <div className="producto__footer">
@@ -33,7 +36,7 @@ export const ProductosLista = () => {
         <div className="producto">
           <a href="#">
             <div className="producto__img">
-              <img src={IMG} alt="" />
+              <img src={IMG2} alt="" />
             </div>
           </a>
           <div className="producto__footer">
@@ -55,7 +58,7 @@ export const ProductosLista = () => {
         <div className="producto">
           <a href="#">
             <div className="producto__img">
-              <img src={IMG} alt="" />
+              <img src={IMG3} alt="" />
             </div>
           </a>
           <div className="producto__footer">
