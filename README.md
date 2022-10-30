@@ -34,4 +34,5 @@ Create Data Base
 ```sh
 docker exec -it hunteando bash
 Then copy and paste viviero13.sql and enter
+And copy and paste vivero13-createUserTable.sql and enter
 ```
