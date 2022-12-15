@@ -6,7 +6,7 @@ import TYPES from "../reducers/actionType.js";
 import { productsInitialState, reducerCart } from "../reducers/shoppingCart_reducer";
 import { useReducer } from "react";
 import EmptyCart from "./emptyCart.jsx";
-import CardProduct from "./cardProduct.jsx";
+import CardProduct from "./cardProduct.jsx"; 
 import { useEffect } from 'react';
 
 
