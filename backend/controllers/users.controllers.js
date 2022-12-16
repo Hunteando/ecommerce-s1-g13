@@ -1,24 +1,26 @@
 import { pool } from "../db.js";
 
 export const createUser = async (req, res) => {
-  const { firstName, 
-          lastName, 
-          mobile, 
-          email, 
-          passwordHash,
-          admin,
-          vendor,
-          lastLogin,
-          intro,
-          profile,
-          photo} = req.body;
+  const { firstName,
+    middleName,
+    lastName,
+    mobile,
+    email,
+    passwordHash,
+    admin,
+    vendor,
+    lastLogin,
+    intro,
+    profile,
+    photo } = req.body;
   const [result] = await pool.query(
-    "INSERT INTO user (firstName, lastName, mobile, email, passwordHash, admin, vendor, lastLogin, intro, profile, photo) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
-    [firstName, lastName, mobile, email, passwordHash, admin, vendor, lastLogin, intro, profile, photo]
+    "INSERT INTO user (firstName, middleName, lastName, mobile, email, passwordHash, admin, vendor, lastLogin, intro, profile, photo) VALUES (?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+    [firstName,middleName, lastName, mobile, email, passwordHash, admin, vendor, lastLogin, intro, profile, photo]
   );
   res.json({
     id: result.insertId,
     firstName,
+    middleName,
     lastName,
     mobile,
     email,
@@ -29,7 +31,7 @@ export const createUser = async (req, res) => {
     intro,
     profile,
     photo
-    
+
   });
 };
 
