@@ -7,7 +7,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export const createImage = async (req, res) => {
-  const productId = 1;
+
+  const productId = req.body.id;
   const title = req.file.originalname;
   const type = req.file.mimetype;
   const data = fs.readFileSync(

@@ -62,6 +62,11 @@ export const getProduct = async (req, res) => {
   res.json(result[0]);
 };
 
+export const getCustomProducts = async (req, res) => {
+  const [result] = await pool.query("SELECT p.id, p.title, p.summary, i.data FROM product p INNER JOIN image i ON p.id = i.productId");
+  res.json(result);
+}
+
 export const updateProduct = async (req, res) => {
   const [result] = await pool.query("UPDATE product SET ? WHERE id = ?", [
     req.body,
@@ -86,3 +91,10 @@ export const deleteProduct = async (req, res) => {
 
   return res.sendStatus(204);
 };
+
+// export const getCustomProducts = async (req, res) => {
+//   const [result] = await pool.query(
+//     "SELECT * FROM product ORDER BY createdAt ASC"
+//   );
+//   res.json(result);
+// };
